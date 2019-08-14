@@ -83,8 +83,8 @@ main::after {
 }
 
 main.animate::after {
-  animation:         gradient_background 15s linear 0s infinite;
-  -webkit-animation: gradient_background 15s linear 0s infinite;
+  animation:         gradient_background 20s linear 5s infinite;
+  -webkit-animation: gradient_background 20s linear 5s infinite;
 }
 
 
