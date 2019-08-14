@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Isotope Filter</title>
+  <link href="styles/custom-reset-2019.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
+  <link href="styles/isotope.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <main class="animate">
+    <article class="article">
+      <h2 class="fancy-h2">Isotope Filtering:</h2>
+
+
+      <!-- =====================================================================
+                                filter buttons
+      ====================================================================== -->
+
+
+      <div class="filter-buttons-container">
+        <button class="filter-button is-checked" data-filter="*">show all</button><!-- apply .is-checked to this by default -->
+        <button class="filter-button" data-filter=".italic">italic</button>
+        <button class="filter-button" data-filter=".bg-magenta">magenta</button>
+        <button class="filter-button" data-filter=".bg-pink, .bold">pink and bold</button>
+        <button class="filter-button" data-filter=":not(.bg-magenta)">not magenta</button>
+        <button class="filter-button" data-filter=".italic:not(.bg-magenta)">italic but not magenta</button>
+        <button class="filter-button" data-filter="age_greater_than_50">Age > 50</button>
+        <button class="filter-button" data-filter=".bold">bold</button>
+        <button class="filter-button" data-filter="name_ends_with_man">name ends with 'man'</button>
+      </div>
+
+
+      <!-- =====================================================================
+                               Items to filter
+      ====================================================================== -->
+      <!-- The initial example also set a data-category="..." attribute on each
+      .isotope-item, but it doesn't seem to be needed. -->
+
+
+      <div class="isotope-container">
+        <div class="isotope-item bg-magenta italic">
+          <div class="isotope-item-content">
+            <p class="name">Daveman</p>
+            <p class="age">41</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-light-blue">
+          <div class="isotope-item-content">
+            <p class="name">Holly</p>
+            <p class="age">39</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-yellow italic">
+          <div class="isotope-item-content">
+            <p class="name">Gingerbread</p>
+            <p class="age">9</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-green italic">
+          <div class="isotope-item-content">
+            <p class="name">Corbin</p>
+            <p class="age">1</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-pink bold">
+          <div class="isotope-item-content">
+            <p class="name">Muffy</p>
+            <p class="age">7</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-orange bold">
+          <div class="isotope-item-content">
+            <p class="name">Punkin</p>
+            <p class="age">8</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-pink italic">
+          <div class="isotope-item-content">
+            <p class="name">Wally</p>
+            <p class="age">5</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-green bold">
+          <div class="isotope-item-content">
+            <p class="name">Superman</p>
+            <p class="age">35</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-red italic bold">
+          <div class="isotope-item-content">
+            <p class="name">Spiderman</p>
+            <p class="age">18</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-light-blue bold italic">
+          <div class="isotope-item-content">
+            <p class="name">Logan</p>
+            <p class="age">20</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-green">
+          <div class="isotope-item-content">
+            <p class="name">Dorothy</p>
+            <p class="age">75</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-yellow bold">
+          <div class="isotope-item-content">
+            <p class="name">Molly</p>
+            <p class="age">27</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-orange italic">
+          <div class="isotope-item-content">
+            <p class="name">Richard</p>
+            <p class="age">81</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-light-blue">
+          <div class="isotope-item-content">
+            <p class="name">Paula</p>
+            <p class="age">51</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-magenta italic">
+          <div class="isotope-item-content">
+            <p class="name">Milton</p>
+            <p class="age">93</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-green">
+          <div class="isotope-item-content">
+            <p class="name">Fred</p>
+            <p class="age">70</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-yellow">
+          <div class="isotope-item-content">
+            <p class="name">Timmy</p>
+            <p class="age">7</p>
+          </div>
+        </div>
+
+        <div class="isotope-item bg-red">
+          <div class="isotope-item-content">
+            <p class="name">Ralph</p>
+            <p class="age">92</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+
+  <!-- =========================================================================
+                                  scripts
+  ========================================================================== -->
+
+
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/scrolldir/1.5.0/scrolldir.min.js"></script> -->
+  <script src="scripts/utilities.js"></script>
+  <script src="scripts/isotope.js"></script>
+
+
+  <script>
+    window.onresize = function(){
+      const main = document.getElementsByTagName("MAIN")[0];
+      main.classList.remove("animate");
+      setTimeout(() => { main.classList.add("animate"); }, 1000);
+    }
+  </script>
+</body>
+</html>

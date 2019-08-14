@@ -1,0 +1,167 @@
+
+
+/* =============================================================================
+                                 filter buttons
+============================================================================= */
+
+
+.filter-buttons-container {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 660px;
+  margin: 0 auto 50px auto;
+  padding: 5px;
+}
+
+.filter-button {
+  min-width: 210px;
+  margin: 5px;
+  background-color: rgb(230,230,230);
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 5px;
+  box-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+  transition: all 0.05s linear;
+}
+
+.filter-button:hover {
+  transform: scale(0.975);
+  box-shadow: none;
+}
+
+.filter-button.is-checked {
+  color: white;
+  background-color: #61DAFB;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+
+
+/* =============================================================================
+                              .isotope-container
+============================================================================= */
+/* https://www.w3schools.com/colors/colors_crayola.asp */
+
+
+/* Initially, I tried to make this a flex box container.
+However, once isotope is initialized it seems to overwrite many styles. */
+.isotope-container {
+  box-sizing: content-box;
+  width: 660px;;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+/* clear fix */
+.isotope-container:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+
+/* ===========================
+      .isotope-item
+=========================== */
+
+
+.isotope-item {
+  position: relative;
+  width: 100px;
+  margin: 5px;
+  padding: 100px 0 0 0;
+  float: left;
+  cursor: pointer;
+  color: #333;
+  background-color: lightgray;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+  /* Note: using transition: transform ... will screw up the isotope animation.
+  If you really need to, you can put a wrapper around .isotope-item and apply styles
+  and transition to that. */
+}
+
+.isotope-item.bg-red         { background-color: #FF355E; }
+.isotope-item.bg-orange      { background-color: #FF9933; }
+.isotope-item.bg-yellow      { background-color: #FFFF66; }
+.isotope-item.bg-teal        { background-color: #39CCCC; }
+.isotope-item.bg-green       { background-color: #66FF66; }
+.isotope-item.bg-light-blue  { background-color: #61DAFB; }
+.isotope-item.bg-magenta     { background-color: magenta; }
+.isotope-item.bg-pink        { background-color: #FF6EFF; }
+.isotope-item.bold *         { font-weight: bolder; }
+.isotope-item.italic *       { font-style: italic; }
+
+
+/* ===========================
+    .isotope-item-content
+=========================== */
+
+
+.isotope-item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.isotope-item-content .name,
+.isotope-item-content .age  {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.isotope-item-content .name::before { content: "Name: "; }
+.isotope-item-content .age::before  { content: "Age: ";  }
+
+
+/* =============================================================================
+                            Media Queries
+============================================================================= */
+
+
+@media screen and (max-width: 970px) {
+  .article {
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 870px) {
+  .fancy-h1 {
+    padding: 10px;
+    font-size: 40px;
+  }
+  .fancy-h2 { font-size: 32px; }
+  .filter-buttons-container { width: 510px; }
+  .filter-button { min-width: 117px; }
+  .isotope-container { width: 510px; }
+  .isotope-item {
+    width: 75px;
+    padding-top: 75px;
+    font-size: 10px;
+  }
+  .isotope-item-content .name,
+   .isotope-item-content .age {
+    font-size: 10px;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .fancy-h1 { font-size: 40px; }
+  .fancy-h2 { font-size: 32px; }
+  .filter-buttons-container { width: 426px; }
+  .isotope-container { width: 426px; }
+}
+
+
+@media screen and (max-width: 570px) {
+  .fancy-h1 { font-size: 32px; }
+  .fancy-h2 { font-size: 24px; }
+  .filter-buttons-container { width: 256px; }
+  .isotope-container { width: 256px; }
+}
