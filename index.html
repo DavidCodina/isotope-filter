@@ -12,8 +12,13 @@
 
 
 <body>
+  <header class="fixed-header">
+    <h1 class="fancy-h1">Isotope Filter Search</h1>
+  </header>
+
+
   <main class="animate">
-    <article class="article">
+    <article class="isotope-article">
       <h2 class="fancy-h2">Isotope Filtering:</h2>
 
 
@@ -179,12 +184,12 @@
 
 
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/scrolldir/1.5.0/scrolldir.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrolldir/1.5.0/scrolldir.min.js"></script>
   <script src="scripts/utilities.js"></script>
   <script src="scripts/isotope.js"></script>
-
-
   <script>
+    scrollDir({ dir: 'up' }); //The default is 'down'
+
     window.onresize = function(){
       const main = document.getElementsByTagName("MAIN")[0];
       main.classList.remove("animate");
