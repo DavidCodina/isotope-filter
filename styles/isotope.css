@@ -1,4 +1,22 @@
+/* =============================================================================
+                                .isotope-article
+============================================================================= */
 
+
+.isotope-article {
+  position: relative; /* Specifically for the z-index */
+  min-height: 650px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: rgba(255,255,255,0.25);
+  border: 2px solid rgba(0,0,0,0.35);
+  border-radius: 1.5rem;
+  box-shadow: -5px 5px 5px rgba(0,0,0,0.25),
+               5px 5px 5px rgba(0,0,0,0.25);
+  overflow-x:scroll;
+  z-index: 1;
+}
 
 /* =============================================================================
                                  filter buttons
